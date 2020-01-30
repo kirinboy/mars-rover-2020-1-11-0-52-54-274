@@ -10,4 +10,10 @@ public class MarsRoverTest {
         MarsRover marsRover = new MarsRover(10, 20, "N");
         assertEquals("(10, 20) N", marsRover.toString());
     }
+
+    @Test
+    public void should_be_able_to_move_when_direction_is_N() {
+        MarsRover marsRover = new MarsRover(10, 20, "N");
+        assertEquals("(10, 21) N", marsRover.move());
+    }
 }

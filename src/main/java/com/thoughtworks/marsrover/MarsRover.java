@@ -15,4 +15,9 @@ public class MarsRover {
     public String toString() {
         return "(" + x + ", " + y + ") " + direction;
     }
+
+    public String move() {
+        this.y++;
+        return toString();
+    }
 }
