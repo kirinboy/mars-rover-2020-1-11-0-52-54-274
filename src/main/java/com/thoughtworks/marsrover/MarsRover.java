@@ -17,7 +17,10 @@ public class MarsRover {
     }
 
     public String move() {
-        this.y++;
+        if (direction.equals("N"))
+            this.y++;
+        if (direction.equals("S"))
+            this.y--;
         return toString();
     }
 }

@@ -16,4 +16,10 @@ public class MarsRoverTest {
         MarsRover marsRover = new MarsRover(10, 20, "N");
         assertEquals("(10, 21) N", marsRover.move());
     }
+
+    @Test
+    public void should_be_able_to_move_when_direction_is_S() {
+        MarsRover marsRover = new MarsRover(10, 20, "S");
+        assertEquals("(10, 19) S", marsRover.move());
+    }
 }
