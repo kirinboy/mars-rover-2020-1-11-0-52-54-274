@@ -21,6 +21,8 @@ public class MarsRover {
             this.y++;
         if (direction.equals("S"))
             this.y--;
+        if (direction.equals("W"))
+            this.x--;
         return toString();
     }
 }
