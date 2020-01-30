@@ -34,4 +34,10 @@ public class MarsRoverTest {
         MarsRover marsRover = new MarsRover(10, 20, "E");
         assertEquals("(11, 20) E", marsRover.move());
     }
+
+    @Test
+    public void should_be_able_to_receive_move_command() {
+        MarsRover marsRover = new MarsRover(10, 20, "E");
+        assertEquals("(11, 20) E", marsRover.receiveCommand("M"));
+    }
 }

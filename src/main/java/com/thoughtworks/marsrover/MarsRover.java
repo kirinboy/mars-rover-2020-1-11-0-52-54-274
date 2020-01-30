@@ -27,4 +27,8 @@ public class MarsRover {
             this.x++;
         return toString();
     }
+
+    public String receiveCommand(String command) {
+        return move();
+    }
 }
