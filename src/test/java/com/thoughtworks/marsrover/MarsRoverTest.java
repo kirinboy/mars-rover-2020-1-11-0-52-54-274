@@ -46,4 +46,10 @@ public class MarsRoverTest {
         MarsRover marsRover = new MarsRover(10, 20, "N");
         assertEquals("(10, 20) W", marsRover.receiveCommand("L"));
     }
+
+    @Test
+    public void should_be_able_to_receive_turn_left_command_when_mars_rover_is_facing_S() {
+        MarsRover marsRover = new MarsRover(10, 20, "S");
+        assertEquals("(10, 20) E", marsRover.receiveCommand("L"));
+    }
 }
