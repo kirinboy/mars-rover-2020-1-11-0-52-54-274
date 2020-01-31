@@ -18,17 +18,21 @@ public class MarsRover {
 
     public String receiveCommand(String command) {
         if (command.equals("L")) {
-            if (direction.equals("N"))
-                direction = "W";
-            else if (direction.equals("S"))
-                direction = "E";
-            else if (direction.equals("E"))
-                direction = "N";
-            else if (direction.equals("W"))
-                direction = "S";
-            return toString();
+            return turnLeft();
         }
         return move();
+    }
+
+    private String turnLeft() {
+        if (direction.equals("N"))
+            direction = "W";
+        else if (direction.equals("S"))
+            direction = "E";
+        else if (direction.equals("E"))
+            direction = "N";
+        else if (direction.equals("W"))
+            direction = "S";
+        return toString();
     }
 
     private String move() {
