@@ -20,6 +20,10 @@ public class MarsRover {
         if (command.equals("L")) {
             return turnLeft();
         }
+        if (command.equals("R")) {
+            direction = "E";
+            return toString();
+        }
         return move();
     }
 
