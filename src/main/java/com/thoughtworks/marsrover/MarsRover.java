@@ -20,8 +20,10 @@ public class MarsRover {
         if (command.equals("L")) {
             if (direction.equals("N"))
                 direction = "W";
-            if (direction.equals("S"))
+            else if (direction.equals("S"))
                 direction = "E";
+            else if (direction.equals("E"))
+                direction = "N";
             return toString();
         }
         return move();
