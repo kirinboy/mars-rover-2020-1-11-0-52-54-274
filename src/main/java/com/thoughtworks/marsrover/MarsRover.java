@@ -21,15 +21,7 @@ public class MarsRover {
             return turnLeft();
         }
         if (command.equals("R")) {
-            if (direction.equals("N"))
-                direction = "E";
-            else if (direction.equals("S"))
-                direction = "W";
-            else if (direction.equals("E"))
-                direction = "S";
-            else if (direction.equals("W"))
-                direction = "N";
-            return toString();
+            return turnRight();
         }
         return move();
     }
@@ -43,6 +35,18 @@ public class MarsRover {
             direction = "N";
         else if (direction.equals("W"))
             direction = "S";
+        return toString();
+    }
+
+    private String turnRight() {
+        if (direction.equals("N"))
+            direction = "E";
+        else if (direction.equals("S"))
+            direction = "W";
+        else if (direction.equals("E"))
+            direction = "S";
+        else if (direction.equals("W"))
+            direction = "N";
         return toString();
     }
 
