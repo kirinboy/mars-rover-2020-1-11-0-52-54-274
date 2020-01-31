@@ -16,7 +16,11 @@ public class MarsRover {
         return "(" + x + ", " + y + ") " + direction;
     }
 
-    public String move() {
+    public String receiveCommand(String command) {
+        return move();
+    }
+
+    private String move() {
         if (direction.equals("N"))
             this.y++;
         if (direction.equals("S"))
@@ -26,9 +30,5 @@ public class MarsRover {
         if (direction.equals("E"))
             this.x++;
         return toString();
-    }
-
-    public String receiveCommand(String command) {
-        return move();
     }
 }
